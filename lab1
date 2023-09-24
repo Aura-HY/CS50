@@ -1,0 +1,39 @@
+/*CS50
+ lab1
+*/
+
+#include<stdio.h>
+
+int main()
+{
+    // TODO: Prompt for start size
+    int pop1=0;
+    printf("请输入美洲驼的起始population:");
+    scanf("%i",&pop1);
+    while (pop1<9)
+    {
+        printf("请重新输入美洲驼的起始population:");
+        scanf("%i",&pop1);
+
+    } 
+
+    
+    // TODO: Prompt for end size
+    int end=0;
+    printf("请输入美洲驼的end population:");
+    scanf("%i",&end);
+    while (end<pop1)
+    {
+        printf("请重新输入美洲驼的end population:");
+        scanf("%i",&end);
+
+    } 
+    // TODO: Calculate number of years until we reach threshold
+     int j=pop1+pop1/3-pop1/4;
+     int i=1;
+     for(i=1 ;j!=end;i++)
+     {
+      j=j+j/3-j/4;
+     }
+     printf("%i",i);
+}
